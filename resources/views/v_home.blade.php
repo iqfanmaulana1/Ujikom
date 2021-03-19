@@ -1,6 +1,6 @@
 @extends('layout.v_template')
-@section('title', 'Guru')
+@section('title', 'Home')
 @section('content')
-<h1>Ini halaman Home</h1>
-
+<h1>{{ $nama_sekolah }}</h1><br>
+<h1>{{ $alamat }}</h1>
 @endsection
