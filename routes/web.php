@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GuruController;
+use App\Http\Controllers\SiswaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,5 +17,6 @@ use App\Http\Controllers\GuruController;
 
 Route::get('/',[HomeController::class, 'index']);
 Route::get('/guru',[GuruController::class, 'index']);
+Route::get('/siswa',[SiswaController::class, 'index']);
 
 
