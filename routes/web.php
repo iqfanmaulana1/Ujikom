@@ -17,6 +17,8 @@ use App\Http\Controllers\SiswaController;
 
 Route::get('/',[HomeController::class, 'index']);
 Route::get('/guru',[GuruController::class, 'index']);
+Route::get('/guru/detail/{id_guru}',[GuruController::class, 'detail']);
 Route::get('/siswa',[SiswaController::class, 'index']);
-
+Route::get('/guru/add',[GuruController::class, 'add']);
+Route::get('/guru/insert',[GuruController::class, 'insert']);
 

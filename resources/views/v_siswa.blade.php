@@ -1,5 +1,5 @@
 @extends('layout.v_template')
-@section('title', 'Guru')
+@section('title', 'Siswa')
 @section('content')
 
 @foreach ($siswa as $data)
