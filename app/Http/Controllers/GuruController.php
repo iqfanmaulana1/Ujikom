@@ -36,10 +36,18 @@ class GuruController extends Controller
     public function insert()
     {
         Request()->validate([
-            'nip' => 'required|unique:tbl_guru,nip|min:5|max:7',
+            'nip' => 'required|unique:tbl_guru,nip|min:5|max:10',
             'nama_guru' => 'required',
             'mapel' => 'required',
             'alamat' => 'required',
+        ], [
+            'nip.required' => 'Wajib Di isi !!!',
+            'nip.unique' => 'Nip Ini Sudah Ada !!!',
+            'nip.min' => 'Min 5 Karakter',
+            'nip.max' => 'Max 10 Karakter',
+            'nama_guru.required' => 'Wajiib Di isi !!!',
+            'mapel.required' => 'Wajib Di isi !!!',
+            'alamat.required' => 'wajbi diisi !!',
         ]);
     }
 
