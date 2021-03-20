@@ -49,6 +49,17 @@ class GuruController extends Controller
             'mapel.required' => 'Wajib Di isi !!!',
             'alamat.required' => 'wajbi diisi !!',
         ]);
+
+        $data = [
+            'nip' => Request()->nip,
+            'nama_guru' => Request()->nama_guru,
+            'mapel' => Request()->mapel,
+            'alamat' => Request()->alamat,
+        ];
+
+        $this->GuruModel->addData($data);
+        return redirect()->route('guru')->with('pesan', 'Data Berhasil Di Tambahkan !!!');
+
     }
 
 }
