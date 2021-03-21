@@ -21,4 +21,6 @@ Route::get('/guru/detail/{id_guru}',[GuruController::class, 'detail']);
 Route::get('/siswa',[SiswaController::class, 'index']);
 Route::get('/guru/add',[GuruController::class, 'add']);
 Route::post('/guru/insert',[GuruController::class, 'insert']);
-
+Route::get('/guru/edit/{id_guru}',[GuruController::class, 'edit']);
+Route::post('/guru/update/{id_guru}',[GuruController::class, 'update']);
+Route::get('/guru/delete/{id_guru}',[GuruController::class, 'delete']);
