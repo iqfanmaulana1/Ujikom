@@ -31,14 +31,15 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html"><b>Login</b>Users</a>
+    <a href="../../index2.html"><b>Register</b>Users</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
     <p class="login-box-msg">Sign in to start your session</p>
 
-    <form method="POST" action="{{ route('login') }}">
+    <form method="POST" action="{{ route('register') }}">
     @csrf
+
       <div class="form-group has-feedback">
         <input type="email" name="email" class="form-control" placeholder="Email">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
@@ -48,8 +49,19 @@
           </span>
          @enderror
       </div>
+
       <div class="form-group has-feedback">
-        <input type="password" name="password" class="form-control" placeholder="Password">
+        <input name="name" class="form-control" placeholder="Name">
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+        @error('name')
+         <span class="invalid-feedback" role="alert">
+        <strong>{{ $message }}</strong>
+          </span>
+         @enderror
+      </div>
+
+      <div class="form-group has-feedback">
+        <input type="password" name="password_confirmation" class="form-control" placeholder="Confirmasi Password">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
         @error('password')
         <span class="invalid-feedback" role="alert">
@@ -57,6 +69,12 @@
           </span>
           @enderror
       </div>
+
+       <div class="form-group has-feedback">
+        <input type="password" name="password" class="form-control" placeholder="Password">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      </div>
+
       <div class="row">
         <div class="col-xs-8">
           <div class="checkbox icheck">
@@ -66,7 +84,7 @@
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+          <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
         </div>
         <!-- /.col -->
       </div>
@@ -76,7 +94,7 @@
     <!-- /.social-auth-links -->
 
    
-    <a href="{{ route('register') }}" class="text-center">Register</a>
+    <a href="{{ route('login') }}" class="text-center">Login Now</a>
 
   </div>
   <!-- /.login-box-body -->
