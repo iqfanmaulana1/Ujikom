@@ -244,7 +244,7 @@ INSERT INTO `asal` (`id`, `nama`) VALUES
 (89, 'Sulawesi Tenggara'),
 (85, 'Sulawesi Utara'),
 (62, 'Sumatra Barat'),
-(67, 'Sumatra Selatan'),
+(67, 'Sumatra Sela tan'),
 (58, 'Sumatra Utara');
 
 -- --------------------------------------------------------
