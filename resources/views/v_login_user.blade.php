@@ -80,7 +80,7 @@
 
     <div class="social-auth-links text-center">
       <p>- MASUK SEBAGAI -</p>
-      <a href="v_login_admin" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-users"></i>Admin</a>
+      <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-users"></i>Admin</a>
       <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-user"></i>Siswa</a>
     </div>
 

@@ -111,7 +111,16 @@
         </div>
         <div class="pull-left info">
           <p> {{ Auth::user()->name }}</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          <a href="#"><i class="fa fa-circle text-success"></i> 
+            @if (auth()->user()->level==1)
+            Admin
+            @elseif (auth()->user()->level==2)
+            Users
+             @elseif (auth()->user()->level==3)
+            Siswa
+            @endif
+
+          </a>
         </div>
       </div>
       <!-- search form -->
@@ -148,10 +157,9 @@
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
-      <b>Version</b> 2.4.18
+      
     </div>
-    <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE</a>.</strong> All rights
-    reserved.
+    <strong>Copyright &copy;  13-03-2003 - 13-03-2021<a href="https://github.com/iqfanmaulana1">Github</a>.</strong> iqfanmaulana1
   </footer>
   <!-- /.control-sidebar -->
   <!-- Add the sidebar's background. This div must be placed
